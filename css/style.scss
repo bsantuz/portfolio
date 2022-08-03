@@ -1,0 +1,256 @@
+/**
+GERAL
+**/
+@font-face{
+    font-family: 'Open Sans';
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p{
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-align:justify;
+}
+h1{
+    font-size:1rem;
+}
+
+h2{
+    margin: 40px 100px;
+    filter:opacity(0.2);
+    font-weight: bold;
+}
+h3{
+    font-size: 1rem;
+}
+
+p{
+    font-size:0.8rem;
+}
+
+ul{
+    list-style: none;
+}
+
+nav li{
+    margin:0 25px;
+}
+
+a, :visited{
+    font-family: 'Open Sans', sans-serif;
+    text-decoration:none;
+    font-size: 0.8rem;
+    color: #3EF4B3;
+}
+
+a:hover{
+    color:#CB24BA;
+}
+
+header{
+    width: 100%;
+    position:relative;
+    background: #0F0C16;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-space-between{
+    justify-content: space-between;
+}
+.flex-center{
+    justify-content:center;
+    align-items: center;
+}
+
+.bloco{
+    padding: 50px 200px;
+}
+
+.colorRoxo{
+    color: #CB24BA;
+}
+
+.colorVerde{
+    color: #3EF4B3;
+}
+
+/**
+ANIMAÇÕES
+**/
+@keyframes holograma{
+    0%      {top: 0px;}
+    50%    {top: -30px;}
+    100%    {top: 0px;}
+}
+
+@keyframes glasses{
+    0%      {content: url(../img/portrait-arts/head01.png);}
+    49%      {content: url(../img/portrait-arts/head01.png);}
+    50%    {content: url(../img/portrait-arts/head00.png);}
+    51%    {content: url(../img/portrait-arts/head01.png);}
+    52%    {content: url(../img/portrait-arts/head00.png);}
+    53%    {content: url(../img/portrait-arts/head01.png);}
+    54%    {content: url(../img/portrait-arts/head00.png);}
+    55%    {content: url(../img/portrait-arts/head01.png);}
+    100%    {content: url(../img/portrait-arts/head01.png);}
+}
+
+@mixin glitch-face{
+    width:70%;
+    margin: 70px auto 0;
+    content: url(../img/portrait-arts/head03.png)
+}
+
+@mixin normal-face{
+    width:70%;
+    margin: 70px auto 0;
+    content: url(../img/portrait-arts/head02.png)
+}
+
+@keyframes glitch{
+    0%      {@include glitch-face;}
+    5%      {@include glitch-face;}
+    8%    {@include normal-face;}
+    10%    {@include normal-face;}
+    20%    {@include glitch-face;}
+    30%    {@include normal-face;}
+    80%    {@include glitch-face;}
+    95%    {@include normal-face;}
+    100%    {@include glitch-face;}
+}
+
+@keyframes arrow-down-anim{
+    0%      {top: 0px;}
+    30%     {top: -8px;}
+    60%     {top: 3px}
+    90%     {top: -3px;}
+    100%    {top: 0px;}
+}
+/**
+ESPECIFICOS
+**/
+
+
+#portrait{
+    margin-top:70px;
+    position: relative;
+    img{
+        width:70%;
+    }
+}
+
+#portrait img:first-child{
+    animation-name: glasses;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+
+#portrait:hover{
+    animation-name: glitch;
+    animation-duration: 1s;
+    animation-timing-function:ease-in;
+}
+
+#portrait img:last-child{
+    position:absolute;
+    top:0;
+    z-index: 1;
+
+    animation-name:holograma;
+    animation-duration:15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#down-arrow{
+    display: flex;
+    position:relative;
+    height: 1.5rem;
+    filter: invert(1);
+    margin: 30px auto;
+
+    animation-name: arrow-down-anim;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+#down-arrow:hover{
+    height: 2.5rem;
+}
+
+.linear-gradient{
+    background: linear-gradient(#332A47, rgba(0, 0, 0, .0));
+}
+
+.psmall{
+    font-size: 0.7rem;
+    filter: opacity(0.7);
+}
+
+/**
+SOBRE
+**/
+
+#about{
+    background: linear-gradient(#0F0C16, #1A1426);
+
+    #about-description{
+        position: relative;
+        padding: 40px 100px;
+        margin-bottom: 100px;
+
+        h2{
+            text-align: end;
+        }
+
+        #picture{
+            border-radius:50%;
+            position: absolute;
+            top:-100px;
+        }
+    }
+    #container-cards{
+        display: flex;
+        flex-wrap: wrap;
+        align-items:stretch;
+        
+        .card-soft-skill{
+            width: 21%;
+            border: 1px solid #954C9B;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 3%;
+
+            align-items:center;
+
+            flex-wrap: wrap;
+            div{
+                justify-content: space-between;
+            }
+            .card-bg-icon{
+                background-color:#fff;
+                border-radius:50%;
+                width:30px;
+                height:30px;
+                margin: 5px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width:70%;
+                    height: 70%;
+                }
+            }
+        }
+    }
+}

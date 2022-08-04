@@ -318,6 +318,15 @@ ANIMAÇÕES
 /**
 ESPECIFICOS
 **/
+#menu-inicial {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  background: #0F0C16;
+  padding: 50px 100px 20px;
+  min-width: 100%;
+}
+
 #portrait {
   margin-top: 70px;
   position: relative;
@@ -348,6 +357,7 @@ ESPECIFICOS
 }
 
 #portrait img:last-child {
+  content: url(../img/portrait-arts/holograma.png);
   position: absolute;
   top: 0;
   z-index: 1;
@@ -362,6 +372,7 @@ ESPECIFICOS
 }
 
 #down-arrow {
+  content: url(../img/icons/down-arrow-svgrepo-com.svg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -428,13 +439,15 @@ SOBRE
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  padding: 0 20px;
 }
 
 #about #container-cards .card-soft-skill {
-  width: 21%;
+  max-width: 200px;
+  max-height: 250px;
   border: 1px solid #954C9B;
   padding: 20px;
-  margin: 10px;
+  margin: 5px;
   border-radius: 3%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -469,5 +482,65 @@ SOBRE
 #about #container-cards .card-soft-skill .card-bg-icon img {
   width: 70%;
   height: 70%;
+}
+
+@media screen and (max-width: 1280px) {
+  #container-cards {
+    padding: 0 40px !important;
+  }
+  .card-soft-skill {
+    max-width: 320px !important;
+    margin: 10px !important;
+  }
+  .bloco {
+    padding: 50px 100px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .card-soft-skill {
+    max-width: 220px !important;
+    margin: 5px !important;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .card-soft-skill {
+    max-width: 400px !important;
+    margin: 10px !important;
+  }
+  .bloco {
+    padding: 50px 50px;
+  }
+  #menu-inicial {
+    padding: 25px 50px 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #menu-inicial nav {
+    height: 1rem;
+  }
+  #menu-inicial img {
+    content: url(../img/icons/menu-svgrepo-com.svg);
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    height: 3rem;
+  }
+  #menu-inicial div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #menu-inicial ul {
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+    right: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

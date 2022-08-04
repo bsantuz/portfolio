@@ -138,6 +138,14 @@ ANIMAÇÕES
 ESPECIFICOS
 **/
 
+#menu-inicial{
+    position: fixed;
+    top:0;
+    z-index: 3;
+    background: #0F0C16;
+    padding: 50px 100px 20px;
+    min-width: 100%;
+}
 
 #portrait{
     margin-top:70px;
@@ -161,6 +169,7 @@ ESPECIFICOS
 }
 
 #portrait img:last-child{
+    content: url(../img/portrait-arts/holograma.png);
     position:absolute;
     top:0;
     z-index: 1;
@@ -172,6 +181,7 @@ ESPECIFICOS
 }
 
 #down-arrow{
+    content: url(../img/icons/down-arrow-svgrepo-com.svg);
     display: flex;
     position:relative;
     height: 1.5rem;
@@ -222,12 +232,14 @@ SOBRE
         display: flex;
         flex-wrap: wrap;
         align-items:stretch;
+        padding:0 20px;
         
         .card-soft-skill{
-            width: 21%;
+            max-width: 200px;
+            max-height: 250px;
             border: 1px solid #954C9B;
             padding: 20px;
-            margin: 10px;
+            margin: 5px;
             border-radius: 3%;
 
             align-items:center;
@@ -254,3 +266,60 @@ SOBRE
         }
     }
 }
+
+@media screen and(max-width:1280px){
+    #container-cards{
+        padding: 0 40px!important;
+    }
+    .card-soft-skill{
+        max-width: 320px !important;
+        margin: 10px !important;
+    }
+    .bloco{
+        padding: 50px 100px;
+    }
+}
+
+@media screen and(max-width:960px){
+            
+    .card-soft-skill{
+        max-width: 220px !important;
+        margin: 5px !important;
+    }
+}
+
+@media screen and(max-width:780px){
+
+    .card-soft-skill{
+        max-width: 400px !important;
+        margin: 10px !important;
+    }
+    .bloco{
+        padding: 50px 50px;
+    }
+
+    #menu-inicial{
+        padding: 25px 50px 10px;
+        align-items:center;
+        nav{
+            height: 1rem;
+        }
+        img{
+            content: url(../img/icons/menu-svgrepo-com.svg);
+            filter:invert(1);
+            height: 3rem;
+        }
+        div{
+            flex-direction:column;
+        }
+        ul{
+            //display: none;
+            position:absolute;
+            flex-direction:column;
+            padding: 20px;
+            right: 10px;
+        }
+
+    }
+}
+

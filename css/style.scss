@@ -5,6 +5,9 @@ GERAL
     font-family: 'Open Sans';
     src: url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 }
+
+$height-Ilustration: 550px;
+
 *{
     margin: 0;
     padding: 0;
@@ -26,7 +29,7 @@ h2{
     font-weight: bold;
 }
 h3{
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 p{
@@ -103,15 +106,16 @@ ANIMAÇÕES
     100%    {content: url(../img/portrait-arts/head01.png);}
 }
 
+
 @mixin glitch-face{
-    width:70%;
-    margin: 70px auto 0;
+    height: $height-Ilustration;
+    margin: auto;
     content: url(../img/portrait-arts/head03.png)
 }
 
 @mixin normal-face{
-    width:70%;
-    margin: 70px auto 0;
+    height: $height-Ilustration;
+    margin: auto;
     content: url(../img/portrait-arts/head02.png)
 }
 
@@ -127,35 +131,25 @@ ANIMAÇÕES
     100%    {@include glitch-face;}
 }
 
-@keyframes arrow-down-anim{
-    0%      {top: 0px;}
-    30%     {top: -8px;}
-    60%     {top: 3px}
-    90%     {top: -3px;}
-    100%    {top: 0px;}
-}
 /**
 ESPECIFICOS
 **/
+
 
 #menu-inicial{
     position: fixed;
     top:0;
     z-index: 3;
     background: #0F0C16;
-    padding: 50px 100px 20px;
-    min-width: 100%;
 }
 
 #portrait{
-    margin-top:70px;
     position: relative;
-    img{
-        width:70%;
-    }
+    margin: 40px 0 70px;
 }
 
 #portrait img:first-child{
+    height: $height-Ilustration;
     animation-name: glasses;
     animation-duration: 8s;
     animation-iteration-count: infinite;
@@ -173,28 +167,12 @@ ESPECIFICOS
     position:absolute;
     top:0;
     z-index: 1;
+    height: $height-Ilustration;
 
     animation-name:holograma;
     animation-duration:15s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-}
-
-#down-arrow{
-    content: url(../img/icons/down-arrow-svgrepo-com.svg);
-    display: flex;
-    position:relative;
-    height: 1.5rem;
-    filter: invert(1);
-    margin: 30px auto;
-
-    animation-name: arrow-down-anim;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-}
-#down-arrow:hover{
-    height: 2.5rem;
 }
 
 .linear-gradient{
@@ -210,17 +188,13 @@ ESPECIFICOS
 SOBRE
 **/
 
+
 #about{
     background: linear-gradient(#0F0C16, #1A1426);
 
+
     #about-description{
         position: relative;
-        padding: 40px 100px;
-        margin-bottom: 100px;
-
-        h2{
-            text-align: end;
-        }
 
         #picture{
             border-radius:50%;
@@ -230,13 +204,8 @@ SOBRE
     }
     #container-cards{
         display: flex;
-        flex-wrap: wrap;
-        align-items:stretch;
-        padding:0 20px;
         
         .card-soft-skill{
-            max-width: 200px;
-            max-height: 250px;
             border: 1px solid #954C9B;
             padding: 20px;
             margin: 5px;
@@ -244,7 +213,6 @@ SOBRE
 
             align-items:center;
 
-            flex-wrap: wrap;
             div{
                 justify-content: space-between;
             }
@@ -267,32 +235,76 @@ SOBRE
     }
 }
 
-@media screen and(max-width:1280px){
+@media (min-width:1336px){
+
+    #menu-inicial{
+        padding: 50px 100px 20px;
+    }
+
+    #about-description{
+        padding: 40px 100px ;
+                
+        margin:0 auto 100px;
+
+        h2{
+            text-align: end;
+        }
+    }
     #container-cards{
-        padding: 0 40px!important;
+        padding: 0 100px;
+        align-items:stretch;
     }
     .card-soft-skill{
-        max-width: 320px !important;
-        margin: 10px !important;
+        padding: 20px;
     }
-    .bloco{
-        padding: 50px 100px;
-    }
+
 }
 
-@media screen and(max-width:960px){
-            
-    .card-soft-skill{
-        max-width: 220px !important;
-        margin: 5px !important;
+
+@media (min-width:781px) and (max-width:1336px){
+    #about-description{
+                
+        margin:0 auto 100px;
+
+        h2{
+            text-align: end;
+        }
+        
     }
+            
+    #container-cards{
+        flex-wrap: wrap;
+        align-items:stretch;
+        padding: 0;
+    }
+
+    .card-soft-skill{
+        width: 45%;
+    }
+
+    .bloco{
+        padding: 50px 80px;
+    }
+
 }
 
 @media screen and(max-width:780px){
 
+    #about-description{
+        padding: 80px 25px 30px;
+        h2{
+            text-align:center;
+        }
+    }
+
+    #container-cards{
+        flex-direction:column;
+    }
+
     .card-soft-skill{
-        max-width: 400px !important;
-        margin: 10px !important;
+        flex-direction:column;
+        max-width: 400px ;
+        margin: auto ;
     }
     .bloco{
         padding: 50px 50px;
@@ -300,6 +312,7 @@ SOBRE
 
     #menu-inicial{
         padding: 25px 50px 10px;
+        width: 100vw;
         align-items:center;
         nav{
             height: 1rem;

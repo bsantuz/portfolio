@@ -32,7 +32,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 p {
@@ -185,133 +185,97 @@ ANIMAÇÕES
 
 @-webkit-keyframes glitch {
   0% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head03.png);
   }
   5% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head03.png);
   }
   8% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head02.png);
   }
   10% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head02.png);
   }
   20% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head03.png);
   }
   30% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head02.png);
   }
   80% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head03.png);
   }
   95% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head02.png);
   }
   100% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head03.png);
   }
 }
 
 @keyframes glitch {
   0% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head03.png);
   }
   5% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head03.png);
   }
   8% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head02.png);
   }
   10% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head02.png);
   }
   20% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head03.png);
   }
   30% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head02.png);
   }
   80% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head03.png);
   }
   95% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head02.png);
   }
   100% {
-    width: 70%;
-    margin: 70px auto 0;
+    height: 550px;
+    margin: auto;
     content: url(../img/portrait-arts/head03.png);
-  }
-}
-
-@-webkit-keyframes arrow-down-anim {
-  0% {
-    top: 0px;
-  }
-  30% {
-    top: -8px;
-  }
-  60% {
-    top: 3px;
-  }
-  90% {
-    top: -3px;
-  }
-  100% {
-    top: 0px;
-  }
-}
-
-@keyframes arrow-down-anim {
-  0% {
-    top: 0px;
-  }
-  30% {
-    top: -8px;
-  }
-  60% {
-    top: 3px;
-  }
-  90% {
-    top: -3px;
-  }
-  100% {
-    top: 0px;
   }
 }
 
@@ -323,20 +287,15 @@ ESPECIFICOS
   top: 0;
   z-index: 3;
   background: #0F0C16;
-  padding: 50px 100px 20px;
-  min-width: 100%;
 }
 
 #portrait {
-  margin-top: 70px;
   position: relative;
-}
-
-#portrait img {
-  width: 70%;
+  margin: 40px 0 70px;
 }
 
 #portrait img:first-child {
+  height: 550px;
   -webkit-animation-name: glasses;
           animation-name: glasses;
   -webkit-animation-duration: 8s;
@@ -361,6 +320,7 @@ ESPECIFICOS
   position: absolute;
   top: 0;
   z-index: 1;
+  height: 550px;
   -webkit-animation-name: holograma;
           animation-name: holograma;
   -webkit-animation-duration: 15s;
@@ -369,30 +329,6 @@ ESPECIFICOS
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-#down-arrow {
-  content: url(../img/icons/down-arrow-svgrepo-com.svg);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  height: 1.5rem;
-  -webkit-filter: invert(1);
-          filter: invert(1);
-  margin: 30px auto;
-  -webkit-animation-name: arrow-down-anim;
-          animation-name: arrow-down-anim;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-}
-
-#down-arrow:hover {
-  height: 2.5rem;
 }
 
 .linear-gradient {
@@ -416,12 +352,6 @@ SOBRE
 
 #about #about-description {
   position: relative;
-  padding: 40px 100px;
-  margin-bottom: 100px;
-}
-
-#about #about-description h2 {
-  text-align: end;
 }
 
 #about #about-description #picture {
@@ -434,17 +364,9 @@ SOBRE
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  padding: 0 20px;
 }
 
 #about #container-cards .card-soft-skill {
-  max-width: 200px;
-  max-height: 250px;
   border: 1px solid #954C9B;
   padding: 20px;
   margin: 5px;
@@ -452,8 +374,6 @@ SOBRE
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 #about #container-cards .card-soft-skill div {
@@ -484,36 +404,78 @@ SOBRE
   height: 70%;
 }
 
-@media screen and (max-width: 1280px) {
+@media (min-width: 1336px) {
+  #menu-inicial {
+    padding: 50px 100px 20px;
+  }
+  #about-description {
+    padding: 40px 100px;
+    margin: 0 auto 100px;
+  }
+  #about-description h2 {
+    text-align: end;
+  }
   #container-cards {
-    padding: 0 40px !important;
+    padding: 0 100px;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   .card-soft-skill {
-    max-width: 320px !important;
-    margin: 10px !important;
-  }
-  .bloco {
-    padding: 50px 100px;
+    padding: 20px;
   }
 }
 
-@media screen and (max-width: 960px) {
+@media (min-width: 781px) and (max-width: 1336px) {
+  #about-description {
+    margin: 0 auto 100px;
+  }
+  #about-description h2 {
+    text-align: end;
+  }
+  #container-cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    padding: 0;
+  }
   .card-soft-skill {
-    max-width: 220px !important;
-    margin: 5px !important;
+    width: 45%;
+  }
+  .bloco {
+    padding: 50px 80px;
   }
 }
 
 @media screen and (max-width: 780px) {
+  #about-description {
+    padding: 80px 25px 30px;
+  }
+  #about-description h2 {
+    text-align: center;
+  }
+  #container-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .card-soft-skill {
-    max-width: 400px !important;
-    margin: 10px !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 400px;
+    margin: auto;
   }
   .bloco {
     padding: 50px 50px;
   }
   #menu-inicial {
     padding: 25px 50px 10px;
+    width: 100vw;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

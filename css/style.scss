@@ -1,12 +1,11 @@
 /**
 GERAL
 **/
+$height-Ilustration: 550px;
 @font-face{
     font-family: 'Open Sans';
     src: url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 }
-
-$height-Ilustration: 550px;
 
 *{
     margin: 0;
@@ -24,7 +23,6 @@ h1{
 }
 
 h2{
-    margin: 40px 100px;
     filter:opacity(0.2);
     font-weight: bold;
 }
@@ -108,14 +106,12 @@ ANIMAÇÕES
 
 
 @mixin glitch-face{
-    height: $height-Ilustration;
-    margin: auto;
+    margin: 40px auto 70px;
     content: url(../img/portrait-arts/head03.png)
 }
 
 @mixin normal-face{
-    height: $height-Ilustration;
-    margin: auto;
+    margin: 40px auto 70px;
     content: url(../img/portrait-arts/head02.png)
 }
 
@@ -141,6 +137,7 @@ ESPECIFICOS
     top:0;
     z-index: 3;
     background: #0F0C16;
+    width: 100%;
 }
 
 #portrait{
@@ -149,7 +146,6 @@ ESPECIFICOS
 }
 
 #portrait img:first-child{
-    height: $height-Ilustration;
     animation-name: glasses;
     animation-duration: 8s;
     animation-iteration-count: infinite;
@@ -167,7 +163,6 @@ ESPECIFICOS
     position:absolute;
     top:0;
     z-index: 1;
-    height: $height-Ilustration;
 
     animation-name:holograma;
     animation-duration:15s;
@@ -199,7 +194,6 @@ SOBRE
         #picture{
             border-radius:50%;
             position: absolute;
-            top:-100px;
         }
     }
     #container-cards{
@@ -208,7 +202,6 @@ SOBRE
         .card-soft-skill{
             border: 1px solid #954C9B;
             padding: 20px;
-            margin: 5px;
             border-radius: 3%;
 
             align-items:center;
@@ -235,37 +228,91 @@ SOBRE
     }
 }
 
-@media (min-width:1336px){
+@media (min-width:1360px){
+
+    h2{
+        margin: 40px 100px;
+    }
+
+    $height-ilustration: 700px;
+    #portrait img:first-child{
+        height: $height-ilustration;
+    }
+    
+    #portrait:hover{
+        height: $height-ilustration;
+    }
+    
+    #portrait img:last-child{
+        height: $height-ilustration;
+    }
 
     #menu-inicial{
         padding: 50px 100px 20px;
+        justify-content: center;
+        h1{
+            margin-right: 200px;
+        }
     }
 
     #about-description{
+        max-width: 1000px;
         padding: 40px 100px ;
                 
         margin:0 auto 100px;
 
+        #picture{
+            top:-100px;
+        }
         h2{
             text-align: end;
         }
     }
     #container-cards{
         padding: 0 100px;
+        max-width: 1000px;
+        margin: auto;
         align-items:stretch;
     }
     .card-soft-skill{
         padding: 20px;
+        margin: 5px;
     }
 
 }
 
 
-@media (min-width:781px) and (max-width:1336px){
-    #about-description{
-                
-        margin:0 auto 100px;
+@media (min-width:781px) and (max-width:1360px){
 
+    h2{
+        margin: 40px 100px;
+    }
+
+    $height-ilustration: 500px;
+    #portrait img:first-child{
+        height: $height-ilustration;
+    }
+    
+    #portrait:hover{
+        height: $height-ilustration;
+    }
+    
+    #portrait img:last-child{
+        height: $height-ilustration;
+    }
+
+    #menu-inicial{
+        padding: 50px 100px 20px;
+        justify-content: space-around;
+    }
+
+    #about-description{
+        padding: 40px 100px  25px;
+        margin:0 auto 50px;
+
+        #picture{
+            top:-100px;
+        }
         h2{
             text-align: end;
         }
@@ -275,11 +322,12 @@ SOBRE
     #container-cards{
         flex-wrap: wrap;
         align-items:stretch;
-        padding: 0;
+        padding:0 50px;
     }
 
     .card-soft-skill{
-        width: 45%;
+        max-width: 200px;
+        margin:25px;
     }
 
     .bloco{
@@ -290,8 +338,30 @@ SOBRE
 
 @media screen and(max-width:780px){
 
+    h2{
+        margin: 40px 0;
+    }
+
+    $height-ilustration: 240px;
+    #portrait img:first-child{
+        height: $height-ilustration;
+    }
+    
+    #portrait:hover{
+        height: $height-ilustration;
+    }
+    
+    #portrait img:last-child{
+        height: $height-ilustration;
+    }
+
     #about-description{
         padding: 80px 25px 30px;
+        #picture{
+            top:-50px;
+            left: 50px;
+            width: 150px;
+        }
         h2{
             text-align:center;
         }
@@ -304,7 +374,7 @@ SOBRE
     .card-soft-skill{
         flex-direction:column;
         max-width: 400px ;
-        margin: auto ;
+        margin: 10px auto ;
     }
     .bloco{
         padding: 50px 50px;

@@ -22,8 +22,8 @@
     <div id="menu-inicial" class="flex"><!-- Menu -->
         <h1 class="colorRoxo"> &lt;/ bruno Santuz</h1>
         <div class="flex">
-            <img src="" alt="">
-            <nav >
+            <img src="" alt="" onclick="buttonShowMenu()">
+            <nav id="nav-menu">
                 <ul class="flex">
                     <li>
                         <a href="">SOBRE</a>
@@ -102,8 +102,25 @@
             </div>
         </section><!--Sobre-->
 
-        <section id="experiences"> <!--experiencias-->
-
+        <section id="experiences" class="bloco"> <!--experiencias-->
+            <h2>EXPERIENCIAS</h2>
+            <div class="flex flex-space-between">
+                <img src="img/vector-Ilustrations/experiences.svg" alt="Ilustração vetorial: personagem à frente de um notebok e em sua volta tem graficos e calculadoras representando ideias.">
+                <div id="container-experiencies">
+                    <div class="card-experincies">
+                        <button class="flex" onclick="buttonExperiencies('p_exp01')"><span>• Sua empresa ;&#41;</span></button>
+                        <p id="p_exp01" class="linear-gradient">Se você é um recrutador e tem ou provavelmente terá alguma oportunidade de emprego. Estou realmente interessado em trabalhar para sua empresa porque: Eu estaria preparado para me comprometer com qualquer treinamento que possa ser necessário. Por favor, considere um tempo para ler meu currículo e ver meus projetos. Seria um prazer em fazer uma entrevista ou ouvir um feedback que possa me ajudar. Obrigado e cumprimentos.</p>
+                    </div>
+                    <div class="card-experincies">
+                        <button class="flex flex-space-between" onclick="buttonExperiencies('p_exp02')"><span>• Enfermeiro</span><span>FSERJ - HECC</span><span>jan/2021 - atual</span></button>
+                        <p id="p_exp02" class="linear-gradient">hospital de urgência e emergência que atende clínica médica, clínica cirúrgica e terapia intensiva. Atuo como Enfermeiro Geral nos setores de emergencia e clinica médica. Gerenciando equipe e organizando fluxo. Atuando diretamente em situações de risco de vida e em processos para a segurança do paciente. Orientando a equipe e os pacientes quanto ao melhor cuidado.</p>
+                    </div>
+                    <div class="card-experincies">
+                        <button class="flex flex-space-between"  onclick="buttonExperiencies('p_exp03')"><span>• Ilustrador</span><span>Freelancer</span><span>2018 - 2020</span></button>
+                        <p id="p_exp03" class="linear-gradient">Densenvolvia designers, concepts arts e ilustrações para games, livros e publicidade, baseados nos brifings feitos em reuniões com os cliente. Além disso alinhava e dirigia as artes de acordo com o feedback recebido.</p>
+                    </div>
+                </div>
+            </div>
         </section><!--experiencias-->
 
         <section id="projects"> <!--projetos-->

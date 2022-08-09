@@ -59,6 +59,7 @@ header{
     background: #0F0C16;
 }
 
+
 .flex{
     display: flex;
 }
@@ -138,6 +139,7 @@ ESPECIFICOS
     z-index: 3;
     background: #0F0C16;
     width: 100%;
+    transition: all 1s;
 }
 
 #portrait{
@@ -228,7 +230,37 @@ SOBRE
     }
 }
 
-@media (min-width:1360px){
+#experiences{
+    background-color: #1A1426;
+
+    div{
+        align-items: flex-start;
+        img{
+            width: 50%;
+        }
+        div{
+            width: 100%;
+        }
+    }
+    p{
+        padding: 20px 40px;
+    }
+    button{
+        cursor:pointer;
+        width: 100%;
+        background-color: #161121;
+        border: none;
+        padding: 20px;
+        margin-top: 5px;
+    }
+    span{
+        color: #fff;
+        text-align: initial;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width:1367px){
 
     h2{
         margin: 40px 100px;
@@ -282,7 +314,7 @@ SOBRE
 }
 
 
-@media (min-width:781px) and (max-width:1360px){
+@media (min-width:781px) and (max-width:1366px){
 
     h2{
         margin: 40px 100px;
@@ -384,6 +416,7 @@ SOBRE
         padding: 25px 50px 10px;
         width: 100vw;
         align-items:center;
+        justify-content: space-between;
         nav{
             height: 1rem;
         }
@@ -397,12 +430,32 @@ SOBRE
         }
         ul{
             //display: none;
+            text-align: end;
+            background-color:#0F0C16;
+            opacity: 0.9;
             position:absolute;
             flex-direction:column;
             padding: 20px;
             right: 10px;
         }
+        li{
+            margin: 10px
+        }
 
+        a{
+            font-size: 1.2rem;
+        }
+
+    }
+
+    #experiences > div{
+        flex-direction: column;
+        img{
+            width: 100%;
+        }
+        p{
+            padding: 16px;
+        }
     }
 }
 

@@ -51,16 +51,35 @@ window.addEventListener("scroll", function(event) {
 const mql = window.matchMedia("(max-width: 780px)")
 
 if (mql.matches) {
-    buttonShowMenu("none")
+    buttonShowMenu("none");
 } else{
-    buttonShowMenu("flex")
+    buttonShowMenu("flex");
 }
 
 mql.onchange = (e) => {
     if (e.matches) {
-        buttonShowMenu("none")
+        buttonShowMenu("none");
     } else{
-        buttonShowMenu("flex")
+        buttonShowMenu("flex");
     }
 }
 
+var idxCarousel = 0;
+var container = document.getElementById("container-projects");
+var countItens = container.childElementCount;
+
+function carouselsNext(){
+    if (countItens - 3 > idxCarousel) {
+        idxCarousel ++
+        var x = idxCarousel * -250;
+        container.style.transform = "translateX("+x+"px)"
+    }
+}
+
+function carouselsBack(){
+    if (0 < idxCarousel) {
+        idxCarousel --
+        var x = idxCarousel * -250;
+        container.style.transform = "translateX("+x+"px)"
+    }
+}

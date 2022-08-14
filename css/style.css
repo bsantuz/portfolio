@@ -14,7 +14,7 @@ GERAL
           box-sizing: border-box;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, span {
   font-family: 'Open Sans', sans-serif;
   color: #fff;
   text-align: justify;
@@ -32,6 +32,7 @@ h2 {
 
 h3 {
   font-size: 0.8rem;
+  font-weight: bold;
 }
 
 p {
@@ -51,9 +52,14 @@ a, :visited {
   text-decoration: none;
   font-size: 0.8rem;
   color: #3EF4B3;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 a:hover {
+  font-size: 1.2rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   color: #CB24BA;
 }
 
@@ -61,6 +67,20 @@ header {
   width: 100%;
   position: relative;
   background: #0F0C16;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .flex {
@@ -327,6 +347,10 @@ ESPECIFICOS
 /**
 SOBRE
 **/
+body {
+  background-color: #1A1426;
+}
+
 #about {
   background: -webkit-gradient(linear, left top, left bottom, from(#0F0C16), to(#1A1426));
   background: linear-gradient(#0F0C16, #1A1426);
@@ -354,6 +378,8 @@ SOBRE
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #about #container-cards .card-soft-skill div {
@@ -384,14 +410,12 @@ SOBRE
   height: 70%;
 }
 
-#experiences {
-  background-color: #1A1426;
-}
-
 #experiences div {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
 }
 
 #experiences div img {
@@ -407,18 +431,136 @@ SOBRE
 }
 
 #experiences button {
-  cursor: pointer;
   width: 100%;
   background-color: #161121;
-  border: none;
   padding: 20px;
   margin-top: 5px;
+}
+
+#experiences button:hover {
+  border: 1px solid #cf6bd8;
 }
 
 #experiences span {
   color: #fff;
   text-align: initial;
   font-size: 1rem;
+}
+
+#projects > div.flex-center {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 100px;
+}
+
+#projects #carousels {
+  width: 750px;
+  overflow-x: hidden;
+}
+
+#projects #container-projects {
+  position: relative;
+  left: 370px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+}
+
+#projects button {
+  font-size: 3rem;
+  background: transparent;
+  font-weight: bolder;
+  color: #fff;
+}
+
+#projects button:hover {
+  color: #EE2EDB;
+}
+
+#projects .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  font-weight: bold;
+  -webkit-box-shadow: 3px 3px #161121;
+          box-shadow: 3px 3px #161121;
+  color: #fff;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+#projects p {
+  margin: 25px;
+}
+
+#projects .project {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 25px;
+  overflow-x: hidden;
+  min-width: 250px;
+}
+
+#projects .project h3 {
+  z-index: 1;
+  color: #FFFA7D;
+  position: relative;
+  top: 35px;
+  opacity: 0.9;
+  text-shadow: 2px 2px #0F0C16;
+}
+
+#projects .project .img-project-code {
+  -webkit-transform: translateX(125px);
+          transform: translateX(125px);
+  -webkit-transition: -webkit-transform ease-in-out 1s;
+  transition: -webkit-transform ease-in-out 1s;
+  transition: transform ease-in-out 1s;
+  transition: transform ease-in-out 1s, -webkit-transform ease-in-out 1s;
+}
+
+#projects .project .img-project-code img {
+  height: 250px;
+}
+
+#projects .project .img-project-code div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  top: -150px;
+  left: 360px;
+  font-weight: bold;
+}
+
+#projects .project .img-project-code div a:first-child {
+  color: #EE2EDB;
+}
+
+#projects .project .img-project-code div a:last-child {
+  color: #F4DB79;
+}
+
+#projects .project .img-project-code:hover {
+  -webkit-transform: translateX(-126px);
+          transform: translateX(-126px);
 }
 
 @media (min-width: 1367px) {

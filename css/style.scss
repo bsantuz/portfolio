@@ -13,7 +13,7 @@ $height-Ilustration: 550px;
     box-sizing: border-box;
 }
 
-h1, h2, h3, p{
+h1, h2, h3, p, span{
     font-family: 'Open Sans', sans-serif;
     color: #fff;
     text-align:justify;
@@ -28,6 +28,7 @@ h2{
 }
 h3{
     font-size: 0.8rem;
+    font-weight: bold;
 }
 
 p{
@@ -47,9 +48,12 @@ a, :visited{
     text-decoration:none;
     font-size: 0.8rem;
     color: #3EF4B3;
+    transition: all 0.5s;
 }
 
 a:hover{
+    font-size: 1.2rem;
+    transition: all 0.5s;
     color:#CB24BA;
 }
 
@@ -57,6 +61,16 @@ header{
     width: 100%;
     position:relative;
     background: #0F0C16;
+}
+
+button{
+    cursor:pointer;
+    border: none;
+    transition: all 0.5s;
+}
+button:hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
 }
 
 
@@ -185,6 +199,9 @@ ESPECIFICOS
 SOBRE
 **/
 
+body{
+    background-color: #1A1426;
+}
 
 #about{
     background: linear-gradient(#0F0C16, #1A1426);
@@ -226,15 +243,16 @@ SOBRE
                     height: 70%;
                 }
             }
+            transition: all 0.5s;
         }
     }
 }
 
 #experiences{
-    background-color: #1A1426;
 
     div{
         align-items: flex-start;
+        transition: all ease-in-out 1s;
         img{
             width: 50%;
         }
@@ -246,18 +264,114 @@ SOBRE
         padding: 20px 40px;
     }
     button{
-        cursor:pointer;
         width: 100%;
         background-color: #161121;
-        border: none;
         padding: 20px;
         margin-top: 5px;
+    }
+    button:hover{
+        border: 1px solid #cf6bd8;
     }
     span{
         color: #fff;
         text-align: initial;
         font-size: 1rem;
     }
+}
+
+#projects > div.flex-center{
+    flex-direction: column;
+    padding: 0 100px;
+}
+
+#projects{
+
+    #carousels{
+        width: 750px;
+        overflow-x: hidden;
+    }
+
+    #container-projects{
+        position: relative;
+        left:370px;
+        transform: translateX(0);
+        transition: all ease-in-out 1s;
+    }
+    button{
+        font-size: 3rem;
+        background:transparent;
+        font-weight:bolder;
+        color: #fff;
+    }
+    button:hover{
+        color:#EE2EDB;
+    }
+    .logos{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 3px 3px #161121;
+
+        color: #fff;
+        margin: 5px;
+        width: 50px;
+        height:50px;
+    }
+
+    p{
+        margin: 25px;
+    }
+
+
+    .project{
+        flex-direction: column;
+        margin-bottom: 25px;
+        overflow-x:hidden;
+        min-width: 250px;
+
+        h3{
+            z-index:1;
+            color:#FFFA7D;
+            position: relative;
+            top: 35px;
+            opacity: 0.9;
+            text-shadow: 2px 2px #0F0C16;
+        }
+
+
+        .img-project-code{
+            transform: translateX(125px);
+            transition: transform ease-in-out 1s;
+
+            img{
+                height: 250px;
+            }
+
+            div{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                top:-150px;
+                left: 360px;
+
+                font-weight: bold;
+
+                a:first-child{
+                    color: #EE2EDB;
+                }
+                a:last-child{
+                    color: #F4DB79;
+                }
+            }
+        }
+        .img-project-code:hover{
+            transform:translateX(-126px);
+
+        }
+    }
+    
 }
 
 @media (min-width:1367px){

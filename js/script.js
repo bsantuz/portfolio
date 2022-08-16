@@ -70,16 +70,45 @@ var countItens = container.childElementCount;
 
 function carouselsNext(){
     if (countItens - 3 > idxCarousel) {
-        idxCarousel ++
+        idxCarousel ++;
         var x = idxCarousel * -250;
-        container.style.transform = "translateX("+x+"px)"
+        container.style.transform = "translateX("+x+"px)";
     }
 }
 
 function carouselsBack(){
     if (0 < idxCarousel) {
-        idxCarousel --
+        idxCarousel --;
         var x = idxCarousel * -250;
-        container.style.transform = "translateX("+x+"px)"
+        container.style.transform = "translateX("+x+"px)";
     }
 }
+
+function moveLabel(name){
+    document.getElementById(name).addEventListener("focus", () => {
+        document.getElementById("l"+name).style.top = "0";
+    });
+    document.getElementById(name).addEventListener("blur", () => {
+        if(!document.getElementById(name).value){
+            document.getElementById("l"+name).style.color = "#FF4500"
+            document.getElementById("l"+name).style.top = "20px";
+        }else{
+            document.getElementById("l"+name).style.color = "#00FA9A"
+        }
+    });
+    document.getElementById("l"+name).style.top = "20px";
+}
+
+moveLabel("name")
+moveLabel("subject")
+moveLabel("email")
+
+function copy(el){
+    document.getElementById(el).addEventListener("click", ()=>{
+        navigator.clipboard.writeText(document.getElementById(el).innerText)
+        alert("O texto copiado foi: " + document.getElementById(el).innerText);
+    });
+}
+
+copy("copyEmail")
+copy("copyTelefone")

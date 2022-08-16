@@ -11,8 +11,8 @@
 </head>
 <body>
     
-    <header class="bloco">
-        <div id="portrait" class="flex flex-center">
+    <header id="header" class="bloco">
+        <div id="portrait" class="flex-center">
             <img src="img/portrait-arts/head02.png" alt="Ilustração cyberpunk do rosto do autor">
             <img src="" alt="hologramas de prompts de comando">
         </div>
@@ -20,22 +20,24 @@
     </header>
 
     <div id="menu-inicial" class="flex"><!-- Menu -->
-        <h1 class="colorRoxo"> &lt;/ bruno Santuz</h1>
+        <h1 class="colorRoxo">
+            <a href="#header"> &lt;/ bruno Santuz</a>
+        </h1>
         <div class="flex">
             <img src="" alt="" onclick="buttonShowMenu()">
             <nav id="nav-menu">
                 <ul class="flex">
                     <li>
-                        <a href="">SOBRE</a>
+                        <a href="#about">SOBRE</a>
                     </li>
                     <li>
-                        <a href="">EXPERIENCIAS</a>
+                        <a href="#experiences">EXPERIENCIAS</a>
                     </li>
                     <li>
-                        <a href="">PROJETOS</a>
+                        <a href="#projects">PROJETOS</a>
                     </li>
                     <li>
-                        <a href="">CONTATOS</a>
+                        <a href="#contact">CONTATOS</a>
                     </li>
                 </ul>
             </nav>
@@ -56,7 +58,7 @@
             </div>
             <div id="container-cards" class="flex-center">
                 <div class="card-soft-skill">
-                    <div class="flex flex-center">
+                    <div class="flex-center">
                         <div class="card-bg-icon">
                             <img src="img/icons/lightbulb-fill.svg" alt="icone de uma lampada">
                         </div>
@@ -67,7 +69,7 @@
                     </p>
                 </div>
                 <div class="card-soft-skill">
-                    <div class="flex flex-center">
+                    <div class="flex-center">
                         <div class="card-bg-icon">
                             <img src="img/icons/battery-charging.svg" alt="icone de uma bateria">
                         </div>
@@ -78,7 +80,7 @@
                     </p>
                 </div>
                 <div class="card-soft-skill">
-                    <div class="flex flex-center">
+                    <div class="flex-center">
                         <div class="card-bg-icon">
                             <img src="img/icons/kanban-fill.svg" alt="icone de um kanban">
                         </div>
@@ -89,7 +91,7 @@
                     </p>
                 </div>
                 <div class="card-soft-skill">
-                    <div class="flex flex-center">
+                    <div class="flex-center">
                         <div class="card-bg-icon">
                             <img src="img/icons/people-fill.svg" alt="icone de duas pessoas">
                         </div>
@@ -104,7 +106,7 @@
 
         <section id="experiences" class="bloco"> <!--experiencias-->
             <h2>EXPERIENCIAS</h2>
-            <div class="flex flex-space-between">
+            <div class="flex-space-between">
                 <img src="img/vector-Ilustrations/experiences.svg" alt="Ilustração vetorial: personagem à frente de um notebok e em sua volta tem graficos e calculadoras representando ideias.">
                 <div id="container-experiencies">
                     <div class="card-experincies">
@@ -124,13 +126,18 @@
         </section><!--experiencias-->
 
         <section id="projects" class="bloco"> <!--projetos-->
-            <div class="linear-gradient flex flex-center">
+            <div class="linear-gradient flex-center">
                 <h2>PROJETOS</h2>
-                <div class="flex flex-center">
-                    <button onclick="carouselsBack()">&lt</button>
+                <div class="flex-center">
+                    <button onclick="carouselsBack()">
+                        <svg height="50" width="50">
+                            <!--"0,0 45,20 45,30 0,50 0,35 25,25 0,15"-->
+                            <polygon points="50,50 5,30 5,20 50,0 50,15 25,25 50,35"/>
+                        </svg>
+                    </button>
                     <div id="carousels">
-                        <div id="container-projects" class="flex flex-center">
-                            <div class="project flex flex-center" >
+                        <div id="container-projects" class="flex-center">
+                            <div class="project flex-center" >
                                 <h3>Calculadora</h3>
                                 <div class="img-project-code">
                                     <img src="img/projects/calculadora3.png" alt="">
@@ -140,7 +147,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project flex flex-center" >
+                            <div class="project flex-center" >
                                 <h3>Disney Clone</h3>
                                 <div class="img-project-code">
                                     <img src="img/projects/disney-clone4.png" alt="">
@@ -150,7 +157,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project flex flex-center" >
+                            <div class="project flex-center" >
                                 <h3>Jogo da Cobra</h3>
                                 <div class="img-project-code">
                                     <img src="img/projects/jogo-da-cobra3.png" alt="">
@@ -160,7 +167,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project flex flex-center" >
+                            <div class="project flex-center" >
                                 <h3>Jogo da Memoria</h3>
                                 <div class="img-project-code">
                                     <img src="img/projects/jogo-da-memoria3.png" alt="">
@@ -170,7 +177,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project flex flex-center" >
+                            <div class="project flex-center" >
                                 <h3>Jogo da Velha</h3>
                                 <div class="img-project-code">
                                     <img src="img/projects/jogo-da-velha3.png" alt="">
@@ -180,7 +187,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project flex flex-center" >
+                            <div class="project flex-center" >
                                 <h3>Pokedex</h3>
                                 <div class="img-project-code">
                                     <img src="img/projects/pokedex4.png" alt="">
@@ -193,13 +200,17 @@
                             
                         </div>
                     </div>
-                    <button onclick="carouselsNext()">&#62;</button>
+                    <button onclick="carouselsNext()">
+                        <svg height="50" width="50">
+                            <polygon points="0,0 45,20 45,30 0,50 0,35 25,25 0,15"/>
+                        </svg>
+                    </button>
                 </div>
                 <h3>TECNOLOGIAS</h3>
                 <p>
                     Pretendo melhorar e me aperfeiçoar nas principais tecnologias atuais do mercado a fim de me tornar um profissional completo, e para isso busco estudar: em livros, praticando ou fazendo cursos. Quero estar inserido em empresas que tenham o foco nas tendências do mercado e nas tecnologias mais novas.
                 </p>
-                <div class="flex flex-center">
+                <div class="flex-center">
                     <span class="logos" style="background-color: #E54D27;">HTML</span>
                     <span class="logos" style="background-color: #0170BB;">CSS</span>
                     <span class="logos" style="background-color: #DD901D;">JS</span>
@@ -209,13 +220,46 @@
             </div>
         </section><!--projetos-->
 
-        <section id="contact"> <!--contato-->
-
+        <section id="contact" class="bloco"> <!--contato-->
+            <h2>CONTATO</h2>
+            <div class="flex-space-around">
+                <img src="img/vector-Ilustrations/contact.svg" alt="">
+                <form action="" class="flex-column">
+                    <label id="lname" for="name">NOME:</label>
+                    <input id="name" type="text" value="" required>
+                    <label id="lsubject" for="subject">ASSUNTO:</label>
+                    <input id="subject" type="text" required>
+                    <label id="lemail" for="email">EMAIL:</label>
+                    <input id="email" type="email" required>
+                    <label for="message" class="except">MENSAGEM:</label>
+                    <textarea name="" id="message" cols="30" rows="10" required></textarea>
+                    <input type="submit" value="ENVIAR">
+                </form>
+            </div>
+            
         </section><!--contato-->
     </main>
 
-    <footer>
-
+    <footer class="bloco">
+        <div class="flex-center">
+            <div id="copyEmail" class="flex-center">
+                <img src="img/icons/envelope-check-fill.svg" alt="">
+                <a>brunobruno2000@hotmail.com</a>
+            </div >
+            <div id="copyTelefone" class="flex-center">
+                <img src="img/icons/phone-fill.svg" alt="">
+                <a href="tel:+5521982323403">(21)98232-3403</a>
+            </div>
+            <div class="flex-center">
+                <img src="img/icons/github.svg" alt="">
+                <a href="https://github.com/bsantuz" target="_blank">https://github.com/bsantuz</a>
+            </div>
+            <div class="flex-center">
+                <img src="img/icons/linkedin.svg" alt="">
+                <a href="https://www.linkedin.com/in/bruno-santuz-047083118" target="_blank">https://www.linkedin.com/in/bruno-santuz-047083118</a>
+            </div>
+        </div>
+        <p class="flex-center">web designer and cyberpunk ilustration by autor and vector ilustration by DrawKit</p>
     </footer>
 
     <script src="js/script.js"></script>

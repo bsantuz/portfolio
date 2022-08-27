@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Portfolio Bruno Santuz</title>
+    <link rel="icon" type="image/x-icon" href="img/icons/dev-svgrepo-com.svg">
 
     <link rel="stylesheet" href="css/style.css">
     
@@ -16,7 +18,6 @@
             <img src="img/portrait-arts/head02.png" alt="Ilustração cyberpunk do rosto do autor">
             <img src="" alt="hologramas de prompts de comando">
         </div>
-
     </header>
 
     <div id="menu-inicial" class="flex"><!-- Menu -->
@@ -28,21 +29,20 @@
             <nav id="nav-menu">
                 <ul class="flex">
                     <li>
-                        <a href="#about">SOBRE</a>
+                        <a href="#about" onclick="buttonShowMenu()">SOBRE</a>
                     </li>
                     <li>
-                        <a href="#experiences">EXPERIENCIAS</a>
+                        <a href="#experiences" onclick="buttonShowMenu()">EXPERIENCIAS</a>
                     </li>
                     <li>
-                        <a href="#projects">PROJETOS</a>
+                        <a href="#projects" onclick="buttonShowMenu()">PROJETOS</a>
                     </li>
                     <li>
-                        <a href="#contact">CONTATOS</a>
+                        <a href="#contact" onclick="buttonShowMenu()">CONTATOS</a>
                     </li>
                 </ul>
             </nav>
         </div>
-
     </div><!-- Menu -->
 
     <main>
@@ -106,7 +106,7 @@
 
         <section id="experiences" class="bloco"> <!--experiencias-->
             <h2>EXPERIENCIAS</h2>
-            <div class="flex-space-between">
+            <div id="container_exp" class="flex-space-between">
                 <img src="img/vector-Ilustrations/experiences.svg" alt="Ilustração vetorial: personagem à frente de um notebok e em sua volta tem graficos e calculadoras representando ideias.">
                 <div id="container-experiencies">
                     <div class="card-experincies">
@@ -142,8 +142,8 @@
                                 <div class="img-project-code">
                                     <img src="img/projects/calculadora3.png" alt="">
                                     <div>                                    
-                                        <a href="">link</a>
-                                        <a href="">github</a>
+                                        <a href="https://bsantuz.github.io/calculator/" target="_blank">link</a>
+                                        <a href="https://github.com/bsantuz/calculator" target="_blank">github</a>
                                     </div>
                                 </div>
                             </div>
@@ -152,8 +152,8 @@
                                 <div class="img-project-code">
                                     <img src="img/projects/disney-clone4.png" alt="">
                                     <div>                                    
-                                        <a href="">link</a>
-                                        <a href="">github</a>
+                                        <a href="https://bsantuz.github.io/disney-plus-clone/" target="_blank">link</a>
+                                        <a href="https://github.com/bsantuz/disney-plus-clone" target="_blank">github</a>
                                     </div>
                                 </div>
                             </div>
@@ -162,8 +162,8 @@
                                 <div class="img-project-code">
                                     <img src="img/projects/jogo-da-cobra3.png" alt="">
                                     <div>                                    
-                                        <a href="">link</a>
-                                        <a href="">github</a>
+                                        <a href="https://bsantuz.github.io/snake-game/" target="_blank">link</a>
+                                        <a href="https://github.com/bsantuz/snake-game" target="_blank">github</a>
                                     </div>
                                 </div>
                             </div>
@@ -172,8 +172,8 @@
                                 <div class="img-project-code">
                                     <img src="img/projects/jogo-da-memoria3.png" alt="">
                                     <div>                                    
-                                        <a href="">link</a>
-                                        <a href="">github</a>
+                                        <a href="https://bsantuz.github.io/memory-game/" target="_blank">link</a>
+                                        <a href="https://github.com/bsantuz/memory-game" target="_blank">github</a>
                                     </div>
                                 </div>
                             </div>
@@ -182,8 +182,8 @@
                                 <div class="img-project-code">
                                     <img src="img/projects/jogo-da-velha3.png" alt="">
                                     <div>                                    
-                                        <a href="">link</a>
-                                        <a href="">github</a>
+                                        <a href="https://bsantuz.github.io/hash-game/" target="_blank">link</a>
+                                        <a href="https://github.com/bsantuz/hash-game" target="_blank">github</a>
                                     </div>
                                 </div>
                             </div>
@@ -192,8 +192,8 @@
                                 <div class="img-project-code">
                                     <img src="img/projects/pokedex4.png" alt="">
                                     <div>                                    
-                                        <a href="">link</a>
-                                        <a href="">github</a>
+                                        <a href="https://bsantuz.github.io/pokedex/" target="_blank">link</a>
+                                        <a href="https://github.com/bsantuz/pokedex" target="_blank">github</a>
                                     </div>
                                 </div>
                             </div>
@@ -224,15 +224,15 @@
             <h2>CONTATO</h2>
             <div class="flex-space-around">
                 <img src="img/vector-Ilustrations/contact.svg" alt="">
-                <form action="" class="flex-column">
+                <form   action="https://formspree.io/f/xdobjnvd" method="POST" class="flex-column">
                     <label id="lname" for="name">NOME:</label>
-                    <input id="name" type="text" value="" required>
+                    <input id="name" type="text" value="" name="name"  required>
                     <label id="lsubject" for="subject">ASSUNTO:</label>
-                    <input id="subject" type="text" required>
+                    <input id="subject" type="text" name="subject" required>
                     <label id="lemail" for="email">EMAIL:</label>
-                    <input id="email" type="email" required>
+                    <input id="email" type="email" name="email" required>
                     <label for="message" class="except">MENSAGEM:</label>
-                    <textarea name="" id="message" cols="30" rows="10" required></textarea>
+                    <textarea id="message" cols="30" rows="10" name="message" required></textarea>
                     <input type="submit" value="ENVIAR">
                 </form>
             </div>
@@ -244,7 +244,7 @@
         <div class="flex-center">
             <div id="copyEmail" class="flex-center">
                 <img src="img/icons/envelope-check-fill.svg" alt="">
-                <a>brunobruno2000@hotmail.com</a>
+                <a href="mailto:brunobruno2000@hotmail.com">brunobruno2000@hotmail.com</a>
             </div >
             <div id="copyTelefone" class="flex-center">
                 <img src="img/icons/phone-fill.svg" alt="">
@@ -252,14 +252,14 @@
             </div>
             <div class="flex-center">
                 <img src="img/icons/github.svg" alt="">
-                <a href="https://github.com/bsantuz" target="_blank">https://github.com/bsantuz</a>
+                <a href="https://github.com/bsantuz" target="_blank">github.com/bsantuz</a>
             </div>
             <div class="flex-center">
                 <img src="img/icons/linkedin.svg" alt="">
-                <a href="https://www.linkedin.com/in/bruno-santuz-047083118" target="_blank">https://www.linkedin.com/in/bruno-santuz-047083118</a>
+                <a href="https://br.linkedin.com/in/bruno-santuz-047083118" target="_blank">linkedin.com/in/bruno-santuz-047083118</a>
             </div>
         </div>
-        <p class="flex-center">web designer and cyberpunk ilustration by autor and vector ilustration by DrawKit</p>
+        <p class="flex-center psmall">web designer and cyberpunk ilustration by autor and vector ilustration by DrawKit</p>
     </footer>
 
     <script src="js/script.js"></script>

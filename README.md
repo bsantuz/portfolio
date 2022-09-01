@@ -14,7 +14,10 @@
 </p>
 
 ### funcionalidades
-
+<p>versão web</p>
+![version web](./web.png)
+<p>versão mob</p>
+![version mobile](./mob.png)
 
 ### Demostração da Aplicação
 

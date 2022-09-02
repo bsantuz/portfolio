@@ -20,7 +20,7 @@
 
 <p>versão mob</p>
 
-![version mobile](./mob.png)
+<img src="./mob.png" width="300px">
 
 ### Demostração da Aplicação
 

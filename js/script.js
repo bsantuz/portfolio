@@ -1,14 +1,14 @@
-var quantExp = document.getElementById("container_exp").childElementCount
+let quantExp = document.getElementById("container_exp").childElementCount
 
-var scrolltemp = 0;
+let scrolltemp = 0;
 
 const mql = window.matchMedia("(max-width: 780px)")
 
-var idxCarousel = 0;
-var quantShowing = 3;
-var widthMove = 250;
-var container = document.getElementById("container-projects");
-var countItens = container.childElementCount;
+let idxCarousel = 0;
+let quantShowing = 3;
+let widthMove = 250;
+let container = document.getElementById("container-projects");
+let countItens = container.childElementCount;
 
 const cmql = window.matchMedia("(max-width: 1000px)")
 
@@ -25,7 +25,7 @@ function setDisplayNone(el, hiden){
 }
 
 function buttonShowMenu(hiden){
-    var el = document.getElementById("nav-menu")
+    let el = document.getElementById("nav-menu")
 
     const mql = window.matchMedia("(max-width: 780px)")
 
@@ -39,18 +39,20 @@ function buttonShowMenu(hiden){
 }
 
 function buttonExperiencies(id){
-    var el = document.getElementById(id)
+    let el = document.getElementById(id)
     setDisplayNone(el)
 }
 
 function confOneCarousel(){
-    document.getElementById("container-projects").style.left = "350px"
-    document.getElementById("carousels").style.width = "200px"
+    document.getElementById("container-projects").style.left = "0px"
+    document.getElementById("carousels").style.width = "250px"
     widthMove = 200
-    quantShowing = 2;
+    quantShowing = 1;
 }
+
+//resulução maior que 1000px, alterar o left no sass para o site funcionar caso o js não funcione
 function confthreeCarousel(){
-    document.getElementById("container-projects").style.left = "375px"
+    //document.getElementById("container-projects").style.left = "375px"
     document.getElementById("carousels").style.width = "740px"
     widthMove = 250
     quantShowing = 3;
@@ -59,7 +61,7 @@ function confthreeCarousel(){
 function carouselsNext(){
     if (countItens - quantShowing > idxCarousel) {
         idxCarousel ++;
-        var x = idxCarousel * -250;
+        let x = idxCarousel * -250;
         container.style.transform = "translateX("+x+"px)";
     }
 }
@@ -67,7 +69,7 @@ function carouselsNext(){
 function carouselsBack(){
     if (0 < idxCarousel) {
         idxCarousel --;
-        var x = idxCarousel * -250;
+        let x = idxCarousel * -250;
         container.style.transform = "translateX("+x+"px)";
     }
 }
@@ -103,8 +105,8 @@ for (let index = 1; index <= quantExp +1; index++) {
 
 window.addEventListener("scroll", function(event) {
             
-    var scroll_y = this.scrollY;
-    var menu = this.document.getElementById("menu-inicial")
+    let scroll_y = this.scrollY;
+    let menu = this.document.getElementById("menu-inicial")
 
     if(scrolltemp > scroll_y ){
         scrolltemp = scroll_y

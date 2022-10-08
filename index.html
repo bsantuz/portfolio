@@ -9,24 +9,25 @@
     <link rel="icon" type="image/x-icon" href="img/icons/dev-svgrepo-com.svg">
 
     <link rel="stylesheet" href="css/style.css">
+    <meta name="portfolio bruno santuz" content="Site para demostrar a experiencias, principais projetos e posibilitar contato com o desenvolvidor front end bruno de souza soares dos santos">
     
 </head>
 <body>
     
-    <header id="header" class="bloco">
+    <header id="header">
         <div id="portrait" class="flex-center">
-            <img src="img/portrait-arts/head02.png" alt="Ilustração cyberpunk do rosto do autor">
-            <img src="" alt="hologramas de prompts de comando">
+            <img src="img/portrait-arts/head02.avif" alt="Ilustração cyberpunk do rosto do autor">
+            <img id="portrait-img" src="" alt="hologramas de prompts de comando">
         </div>
     </header>
 
     <div id="menu-inicial" class="flex"><!-- Menu -->
-        <h1 class="colorRoxo">
+        <h1 id="nome-logo" class="colorRoxo">
             <a href="#header"> &lt;/ bruno Santuz</a>
         </h1>
         <div class="flex">
             <img src="" alt="" onclick="buttonShowMenu()">
-            <nav id="nav-menu">
+            <nav id="nav-menu" style="display: flex ;">
                 <ul class="flex">
                     <li>
                         <a href="#about" onclick="buttonShowMenu()">SOBRE</a>
@@ -49,7 +50,7 @@
         <section id="about" class="bloco"> <!--Sobre-->
             <div id="about-description" class="linear-gradient">
                 <div>
-                    <img id="picture" src="img/my-picture2.png" alt="Foto do rosto do autor">
+                    <img id="picture" src="img/my-picture.avif" alt="Foto do rosto do autor">
                     <h2>SOBRE</h2>
                 </div>
                 <P>
@@ -128,19 +129,24 @@
         <section id="projects" class="bloco"> <!--projetos-->
             <div class="linear-gradient flex-center">
                 <h2>PROJETOS</h2>
-                <div class="flex-center">
-                    <button onclick="carouselsBack()">
-                        <svg height="50" width="50">
-                            <!--"0,0 45,20 45,30 0,50 0,35 25,25 0,15"-->
-                            <polygon points="50,50 5,30 5,20 50,0 50,15 25,25 50,35"/>
-                        </svg>
-                    </button>
+                <div id="container-carousels">
+
                     <div id="carousels">
-                        <div id="container-projects" class="flex-center">
+                        <div id="container-projects" class="flex-center" style="left:0;">
+                            <div class="project flex-center" >
+                                <h3>kanban</h3>
+                                <div class="img-project-code">
+                                    <img src="img/projects/kanban.avif" alt="Lista de tarefas">
+                                    <div>                                    
+                                        <a href="https://marvelous-nasturtium-365f62.netlify.app/" target="_blank">link</a>
+                                        <a href="https://github.com/bsantuz/Kanban" target="_blank">github</a>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="project flex-center" >
                                 <h3>Previsão do Tempo</h3>
                                 <div class="img-project-code">
-                                    <img src="img/projects/weather.png" alt="">
+                                    <img src="img/projects/weather.avif" alt="aplicação de previsão do tempo">
                                     <div>                                    
                                         <a href="https://vocal-belekoy-57452d.netlify.app/" target="_blank">link</a>
                                         <a href="https://github.com/bsantuz/weather" target="_blank">github</a>
@@ -150,7 +156,7 @@
                             <div class="project flex-center" >
                                 <h3>Calculadora</h3>
                                 <div class="img-project-code">
-                                    <img src="img/projects/calculadora3.png" alt="">
+                                    <img src="img/projects/calculadora.avif" alt="calculadora">
                                     <div>                                    
                                         <a href="https://bsantuz.github.io/calculator/" target="_blank">link</a>
                                         <a href="https://github.com/bsantuz/calculator" target="_blank">github</a>
@@ -160,7 +166,7 @@
                             <div class="project flex-center" >
                                 <h3>Disney Clone</h3>
                                 <div class="img-project-code">
-                                    <img src="img/projects/disney-clone4.png" alt="">
+                                    <img src="img/projects/disney-clone.avif" alt="clone do site da disney">
                                     <div>                                    
                                         <a href="https://bsantuz.github.io/disney-plus-clone/" target="_blank">link</a>
                                         <a href="https://github.com/bsantuz/disney-plus-clone" target="_blank">github</a>
@@ -170,7 +176,7 @@
                             <div class="project flex-center" >
                                 <h3>Jogo da Cobra</h3>
                                 <div class="img-project-code">
-                                    <img src="img/projects/jogo-da-cobra3.png" alt="">
+                                    <img src="img/projects/jogo-da-cobra.avif" alt="jogo da cobra">
                                     <div>                                    
                                         <a href="https://bsantuz.github.io/snake-game/" target="_blank">link</a>
                                         <a href="https://github.com/bsantuz/snake-game" target="_blank">github</a>
@@ -180,7 +186,7 @@
                             <div class="project flex-center" >
                                 <h3>Jogo da Memoria</h3>
                                 <div class="img-project-code">
-                                    <img src="img/projects/jogo-da-memoria3.png" alt="">
+                                    <img src="img/projects/jogo-da-memoria.avif" alt="jogo da memoria">
                                     <div>                                    
                                         <a href="https://bsantuz.github.io/memory-game/" target="_blank">link</a>
                                         <a href="https://github.com/bsantuz/memory-game" target="_blank">github</a>
@@ -190,7 +196,7 @@
                             <div class="project flex-center" >
                                 <h3>Jogo da Velha</h3>
                                 <div class="img-project-code">
-                                    <img src="img/projects/jogo-da-velha3.png" alt="">
+                                    <img src="img/projects/jogo-da-velha.avif" alt="jogo da velha">
                                     <div>                                    
                                         <a href="https://bsantuz.github.io/hash-game/" target="_blank">link</a>
                                         <a href="https://github.com/bsantuz/hash-game" target="_blank">github</a>
@@ -200,7 +206,7 @@
                             <div class="project flex-center" >
                                 <h3>Pokedex</h3>
                                 <div class="img-project-code">
-                                    <img src="img/projects/pokedex4.png" alt="">
+                                    <img src="img/projects/pokedex.avif" alt="aplicação que mostra pokemons">
                                     <div>                                    
                                         <a href="https://bsantuz.github.io/pokedex/" target="_blank">link</a>
                                         <a href="https://github.com/bsantuz/pokedex" target="_blank">github</a>
@@ -209,71 +215,113 @@
                             </div>
                             
                         </div>
+
+                        
                     </div>
-                    <button onclick="carouselsNext()">
-                        <svg height="50" width="50">
-                            <polygon points="0,0 45,20 45,30 0,50 0,35 25,25 0,15"/>
-                        </svg>
-                    </button>
+                    
+                    <div id="buttoes-carrousels">
+
+                        <button onclick="carouselsBack()" alt="proximo imagem dos projetos">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                              </svg>
+                              next
+                        </button>
+
+                        <button onclick="carouselsNext()" alt="volta imagem dos projetos">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                            </svg>
+                            back
+                        </button>
+                    </div>
+
                 </div>
+
+               
                 <h3>TECNOLOGIAS</h3>
                 <p>
                     Pretendo melhorar e me aperfeiçoar nas principais tecnologias atuais do mercado a fim de me tornar um profissional completo, e para isso busco estudar: em livros, praticando ou fazendo cursos. Quero estar inserido em empresas que tenham o foco nas tendências do mercado e nas tecnologias mais novas.
                 </p>
                 <div class="flex-center">
-                    <span class="logos" style="background-color: #E54D27;">HTML</span>
-                    <span class="logos" style="background-color: #0170BB;">CSS</span>
-                    <span class="logos" style="background-color: #C26290;">SASS</span>
-                    <span class="logos" style="background-color: #7610ec;">Bootstrap</span>
-                    <span class="logos" style="background-color: #DD901D;">JS</span>
-                    <span class="logos" style="background-color: #26bcd6;">React.js</span>
-                    <span class="logos" style="background-color: #E44C30;">GIT</span>
+                    <span class="logos" style="background-color: #f7542b;">HTML</span>
+                    <span class="logos" style="background-color: #0391f0;">CSS</span>
+                    <span class="logos" style="background-color: #f37cb5;">SASS</span>
+                    <span class="logos" style="background-color: #8f43e6;">Bootstrap</span>
+                    <span class="logos" style="background-color: #f39e1e;">JS</span>
+                    <span class="logos" style="background-color: #2ad2f0;">React.js</span>
+                    <span class="logos" style="background-color: #f04e31;">GIT</span>
+                    <span class="logos" style="background-color: #8e99d4;">PHP</span>
+                    <span class="logos" style="background-color: #f6be1a;">MYsql</span>
                 </div>
             </div>
         </section><!--projetos-->
 
-        <section id="contact" class="bloco"> <!--contato-->
-            <h2>CONTATO</h2>
-            <div class="flex-space-around">
-                <img src="img/vector-Ilustrations/contact.svg" alt="">
-                <form   action="https://formspree.io/f/xdobjnvd" method="POST" class="flex-column">
-                    <label id="lname" for="name">NOME:</label>
-                    <input id="name" type="text" value="" name="name"  required>
-                    <label id="lsubject" for="subject">ASSUNTO:</label>
-                    <input id="subject" type="text" name="subject" required>
-                    <label id="lemail" for="email">EMAIL:</label>
-                    <input id="email" type="email" name="email" required>
-                    <label for="message" class="except">MENSAGEM:</label>
-                    <textarea id="message" cols="30" rows="10" name="message" required></textarea>
-                    <input type="submit" value="ENVIAR">
-                </form>
+        <section id="contact"> <!--contato-->
+            <div class="bloco">
+                <h2>CONTATO</h2>
+                <div class="flex-space-around">
+                    <img src="img/vector-Ilustrations/contact.svg" alt="">
+                    <form   action="https://formspree.io/f/xdobjnvd" method="POST" class="flex-column">
+                        <label id="lname" for="name">NOME:</label>
+                        <input id="name" type="text" value="" name="name"  required>
+                        <label id="lsubject" for="subject">ASSUNTO:</label>
+                        <input id="subject" type="text" name="subject" required>
+                        <label id="lemail" for="email">EMAIL:</label>
+                        <input id="email" type="email" name="email" required>
+                        <label for="message" class="except">MENSAGEM:</label>
+                        <textarea id="message" cols="30" rows="10" name="message" required></textarea>
+                        <input type="submit" class="custom-button" value="ENVIAR">
+                    </form>
+                </div>
             </div>
-            
         </section><!--contato-->
     </main>
 
-    <footer class="bloco">
-        <div class="flex-center">
-            <div id="copyEmail" class="flex-center">
-                <img src="img/icons/envelope-check-fill.svg" alt="">
-                <a href="mailto:developer@brunosantuz.com">developer@brunosantuz.com</a>
-            </div >
-            <div id="copyTelefone" class="flex-center">
-                <img src="img/icons/phone-fill.svg" alt="">
-                <a href="tel:+5521982323403">(21)98232-3403</a>
+    <footer >
+        <div class="bloco">
+            <div class="flex-center flex-wrap">
+                <div id="copyEmail" class="flex-center">
+                    <img src="img/icons/envelope-check-fill.svg" alt="">
+                    <a href="mailto:developer@brunosantuz.com">developer@brunosantuz.com</a>
+                </div >
+                <div id="copyTelefone" class="flex-center">
+                    <img src="img/icons/phone-fill.svg" alt="">
+                    <a href="tel:+5521982323403">(21)98232-3403</a>
+                </div>
+                <div class="flex-center">
+                    <img src="img/icons/github.svg" alt="">
+                    <a href="https://github.com/bsantuz" target="_blank">github.com/bsantuz</a>
+                </div>
+                <div class="flex-center">
+                    <img src="img/icons/linkedin.svg" alt="">
+                    <a href="https://br.linkedin.com/in/bruno-santuz-047083118" target="_blank">linkedin.com/in/bruno-santuz-047083118</a>
+                </div>
             </div>
             <div class="flex-center">
-                <img src="img/icons/github.svg" alt="">
-                <a href="https://github.com/bsantuz" target="_blank">github.com/bsantuz</a>
+                <div class="flex-center custom-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#161121" class="bi bi-download" viewBox="0 0 16 16" style=" width:20px; height:20px; margin:5px;">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                    </svg>
+                    <a href="./curriculo.pdf" download="curriculo front-end bruno de souza soares dos santos">CURRICULO</a>
+                </div>
             </div>
-            <div class="flex-center">
-                <img src="img/icons/linkedin.svg" alt="">
-                <a href="https://br.linkedin.com/in/bruno-santuz-047083118" target="_blank">linkedin.com/in/bruno-santuz-047083118</a>
-            </div>
+            <p class="flex-center psmall" style="padding-bottom:20px;">web designer and cyberpunk ilustration by autor and vector ilustration by DrawKit</p>
         </div>
-        <p class="flex-center psmall">web designer and cyberpunk ilustration by autor and vector ilustration by DrawKit</p>
+        
     </footer>
 
     <script src="js/script.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XJ71T75NW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7XJ71T75NW');
+    </script>
 </body>
 </html>

@@ -20,10 +20,15 @@ html {
 h1, h2, h3, p, span {
   color: #fff;
   text-align: justify;
+  margin-bottom: 10px;
 }
 
 h1 {
-  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+h1 a, h1 a:hover {
+  font-size: 1.4rem;
 }
 
 h2 {
@@ -46,30 +51,32 @@ nav li {
   margin: 0 25px;
 }
 
-a, :visited {
+a, a:visited {
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
   font-size: 0.8rem;
   color: #3EF4B3;
   transition: all ease-in-out 0.5s;
   line-height: 0.8rem;
+  word-wrap: keep-all;
+  white-space: nowrap;
 }
 
 a:hover {
   color: #ee2bda;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
-h1 a, h1 :visited {
+#nome-logo a:visited {
   color: #ee2bda;
-  font-size: 1.2rem;
 }
-h1 a:hover {
+#nome-logo a:hover {
   color: #3EF4B3;
 }
 
 header {
   width: 100%;
+  padding: 40px 0;
   position: relative;
   background: #0F0C16;
 }
@@ -83,6 +90,27 @@ button {
 button:hover {
   transform: scale(1.05);
   transition: all 0.5s;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0F0C16;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #2d604e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3EF4B3;
 }
 
 .flex {
@@ -130,6 +158,7 @@ button:hover {
 .psmall {
   font-size: 0.7rem;
   filter: opacity(0.7);
+  text-align: center;
 }
 
 /**
@@ -159,136 +188,136 @@ ANIMAÇÕES
 }
 @-webkit-keyframes glasses {
   0% {
-    content: url(../img/portrait-arts/head01.png);
+    content: url(../img/portrait-arts/head01.avif);
   }
   49% {
-    content: url(../img/portrait-arts/head01.png);
+    content: url(../img/portrait-arts/head01.avif);
   }
   50% {
-    content: url(../img/portrait-arts/head00.png);
+    content: url(../img/portrait-arts/head00.avif);
   }
   51% {
-    content: url(../img/portrait-arts/head01.png);
+    content: url(../img/portrait-arts/head01.avif);
   }
   52% {
-    content: url(../img/portrait-arts/head00.png);
+    content: url(../img/portrait-arts/head00.avif);
   }
   53% {
-    content: url(../img/portrait-arts/head01.png);
+    content: url(../img/portrait-arts/head01.avif);
   }
   54% {
-    content: url(../img/portrait-arts/head00.png);
+    content: url(../img/portrait-arts/head00.avif);
   }
   55% {
-    content: url(../img/portrait-arts/head01.png);
+    content: url(../img/portrait-arts/head01.avif);
   }
   100% {
-    content: url(../img/portrait-arts/head01.png);
+    content: url(../img/portrait-arts/head01.avif);
   }
 }
 @keyframes glasses {
   0% {
-    content: url(../img/portrait-arts/head01.png);
+    content: url(../img/portrait-arts/head01.avif);
   }
   49% {
-    content: url(../img/portrait-arts/head01.png);
+    content: url(../img/portrait-arts/head01.avif);
   }
   50% {
-    content: url(../img/portrait-arts/head00.png);
+    content: url(../img/portrait-arts/head00.avif);
   }
   51% {
-    content: url(../img/portrait-arts/head01.png);
+    content: url(../img/portrait-arts/head01.avif);
   }
   52% {
-    content: url(../img/portrait-arts/head00.png);
+    content: url(../img/portrait-arts/head00.avif);
   }
   53% {
-    content: url(../img/portrait-arts/head01.png);
+    content: url(../img/portrait-arts/head01.avif);
   }
   54% {
-    content: url(../img/portrait-arts/head00.png);
+    content: url(../img/portrait-arts/head00.avif);
   }
   55% {
-    content: url(../img/portrait-arts/head01.png);
+    content: url(../img/portrait-arts/head01.avif);
   }
   100% {
-    content: url(../img/portrait-arts/head01.png);
+    content: url(../img/portrait-arts/head01.avif);
   }
 }
 @-webkit-keyframes glitch {
   0% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head03.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head03.avif);
   }
   5% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head03.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head03.avif);
   }
   8% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head02.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head02.avif);
   }
   10% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head02.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head02.avif);
   }
   20% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head03.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head03.avif);
   }
   30% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head02.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head02.avif);
   }
   80% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head03.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head03.avif);
   }
   95% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head02.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head02.avif);
   }
   100% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head03.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head03.avif);
   }
 }
 @keyframes glitch {
   0% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head03.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head03.avif);
   }
   5% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head03.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head03.avif);
   }
   8% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head02.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head02.avif);
   }
   10% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head02.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head02.avif);
   }
   20% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head03.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head03.avif);
   }
   30% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head02.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head02.avif);
   }
   80% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head03.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head03.avif);
   }
   95% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head02.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head02.avif);
   }
   100% {
-    margin: 40px auto 70px;
-    content: url(../img/portrait-arts/head03.png);
+    margin: 50px auto 75px;
+    content: url(../img/portrait-arts/head03.avif);
   }
 }
 /**
@@ -304,8 +333,11 @@ Inicio
 }
 
 #portrait {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   position: relative;
-  margin: 40px 0 70px;
+  margin: 50px auto 75px;
 }
 
 #portrait img:first-child {
@@ -329,7 +361,7 @@ Inicio
 }
 
 #portrait img:last-child {
-  content: url(../img/portrait-arts/holograma.png);
+  content: url(../img/portrait-arts/holograma.avif);
   position: absolute;
   top: 0;
   z-index: 1;
@@ -353,27 +385,34 @@ body {
 #about {
   background: linear-gradient(#0F0C16, #1A1426);
 }
-#about #about-description {
+
+#about-description {
   position: relative;
 }
-#about #about-description #picture {
+#about-description #picture {
   border-radius: 50%;
   position: absolute;
 }
-#about #container-cards {
+
+#container-cards {
   display: flex;
+  justify-content: space-around;
 }
-#about #container-cards .card-soft-skill {
+
+.card-soft-skill {
   align-items: center;
-  border: 1px solid #954C9B;
+  border: 1px solid #ec00ff;
+  box-shadow: 0px 0px 5px 1px rgba(242, 94, 255, 0.4823529412);
   padding: 20px;
   border-radius: 3%;
   transition: all 0.5s;
 }
-#about #container-cards .card-soft-skill div {
+
+.card-soft-skill > div {
   justify-content: space-between;
 }
-#about #container-cards .card-soft-skill .card-bg-icon {
+
+.card-bg-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -383,7 +422,7 @@ body {
   margin: 5px;
   background-color: #fff;
 }
-#about #container-cards .card-soft-skill .card-bg-icon img {
+.card-bg-icon img {
   width: 70%;
   height: 70%;
 }
@@ -416,59 +455,87 @@ body {
   font-size: 1rem;
 }
 
-#projects #carousels {
-  width: 740px;
-  overflow-x: hidden;
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6rem;
+  margin: 5px;
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  font-weight: bolder;
+  box-shadow: 3px 3px #161121;
+  color: rgb(23, 23, 23);
 }
-#projects #container-projects {
+
+.project {
+  flex-direction: column;
+  overflow-x: hidden;
+  margin-bottom: 25px;
+  min-width: 250px;
+}
+.project h3 {
+  z-index: 1;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  top: 40px;
+  opacity: 0.8;
+  text-shadow: 2px 2px #0F0C16;
+}
+
+#projects > div > div:last-child {
+  margin: 10px;
+}
+
+#container-carousels {
+  height: 300px;
+}
+
+#carousels {
+  width: 740px;
+  height: 300px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+#carousels::-webkit-scrollbar {
+  display: none;
+}
+
+#buttoes-carrousels {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -100px;
+}
+#buttoes-carrousels button {
+  background: transparent;
+  margin: 15px;
+  fill: #3EF4B3;
+  color: transparent;
+}
+#buttoes-carrousels button:hover {
+  fill: #cf6bd8;
+}
+
+#container-projects {
   position: relative;
   display: flex;
   justify-content: flex-start;
   transform: translateX(0);
   transition: all ease-in-out 1s;
 }
-#projects button {
-  background: transparent;
-  margin: 15px;
-  fill: #42365a;
-}
-#projects button:hover {
-  fill: #3EF4B3;
-}
-#projects .logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.7rem;
-  margin: 5px;
-  width: 60px;
-  height: 50px;
-  border-radius: 5px;
-  font-weight: bold;
-  box-shadow: 3px 3px #161121;
-  color: #fff;
-}
-#projects .project {
-  flex-direction: column;
-  overflow-x: hidden;
-  margin-bottom: 25px;
-  min-width: 250px;
-}
-#projects .project h3 {
-  z-index: 1;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  position: relative;
-  top: 35px;
-  opacity: 0.8;
-  text-shadow: 2px 2px #0F0C16;
-}
-#projects .project .img-project-code {
+
+.img-project-code {
   transform: translateX(125px);
   transition: transform ease-in-out 1s;
 }
-#projects .project .img-project-code div {
+.img-project-code div {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -476,17 +543,14 @@ body {
   left: 345px;
   font-weight: bold;
 }
-#projects .project .img-project-code div a {
+.img-project-code div a {
   font-size: 1.3rem;
   line-height: 1.3rem;
   text-shadow: 2px 2px 1px #42365a;
 }
-#projects .project .img-project-code:hover {
-  transform: translateX(-126px);
-}
 
-#projects > div > div:last-child {
-  margin: 10px;
+.img-project-code:hover {
+  transform: translateX(-126px);
 }
 
 #contact {
@@ -503,7 +567,7 @@ body {
   cursor: pointer;
   color: #fff;
   font-family: "Open Sans", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 5px 0 0;
   transition: top 0.5s ease-in-out;
 }
@@ -524,22 +588,27 @@ body {
   outline: 0;
   padding: 5px;
 }
-#contact form input[type=submit] {
+
+.custom-button {
   align-self: flex-end;
   width: 150px;
   height: 35px;
-  margin: 10px 0;
+  margin: 10px 0 20px;
   border-radius: 20px;
   border: none;
-  background-color: #015085;
-  color: #fff;
-  box-shadow: 0px 2px #fff;
+  background-color: #015085 !important;
+  box-shadow: 0px 2px #fff !important;
+  border: none !important;
   cursor: pointer;
 }
-#contact form input[type=submit]:hover {
+.custom-button a {
+  color: #fff;
+}
+
+.custom-button:hover {
   position: relative;
   top: 2px;
-  box-shadow: none;
+  box-shadow: none !important;
   background-color: #0170BB;
 }
 
@@ -551,35 +620,40 @@ footer img {
   margin: 5px;
   filter: invert(1);
 }
-footer a {
-  cursor: pointer;
-  font-size: 0.8rem;
+footer .custom-button {
+  background-color: #ffe779 !important;
 }
-footer a:hover {
+footer .custom-button a, footer .custom-button a:hover {
   font-size: 0.8rem;
+  color: #161121;
+  font-weight: bold;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 @media (min-width: 1367px) {
   h2 {
     margin: 40px 100px;
   }
+  h1 {
+    margin-right: 200px;
+  }
   #portrait img:first-child {
-    height: 700px;
+    height: 600px;
   }
   #portrait:hover {
-    height: 700px;
+    height: 600px;
   }
   #portrait img:last-child {
-    height: 700px;
+    height: 600px;
   }
   #menu-inicial {
     padding: 50px 100px 20px;
     justify-content: center;
   }
-  #menu-inicial h1 {
-    margin-right: 200px;
-  }
-  #about-description, #container-cards, #experiences, #projects, #contact, footer {
+  #about-description, #container-cards, #experiences, #projects, #contact > div {
     max-width: 1300px;
     margin: auto;
   }
@@ -598,6 +672,7 @@ footer a:hover {
     padding: 0 100px;
   }
   .card-soft-skill {
+    flex-basis: 25%;
     padding: 20px;
     margin: 5px;
   }
@@ -645,6 +720,7 @@ footer a:hover {
     padding: 0 50px;
   }
   .card-soft-skill {
+    flex-basis: 50%;
     max-width: 200px;
     margin: 25px;
   }
@@ -661,11 +737,14 @@ footer a:hover {
   #contact > p {
     margin: 25px;
   }
-  footer > div {
-    margin: 10px;
-  }
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  p, h3 {
+    font-size: 0.8rem !important;
+  }
   h2 {
     margin: 40px 0;
   }
@@ -673,16 +752,18 @@ footer a:hover {
     height: 100vh;
   }
   #portrait {
-    top: 20vh;
+    top: 7%;
+    overflow: hidden;
+    width: auto;
   }
   #portrait img:first-child {
-    height: 240px;
+    height: 70vh;
   }
   #portrait:hover {
-    height: 240px;
+    height: 70vh;
   }
   #portrait img:last-child {
-    height: 240px;
+    height: 70vh;
   }
   #about-description {
     padding: 80px 25px 30px;
@@ -700,7 +781,6 @@ footer a:hover {
   }
   .card-soft-skill {
     flex-direction: column;
-    max-width: 400px;
     margin: 10px auto;
   }
   .bloco {
@@ -718,7 +798,7 @@ footer a:hover {
   #menu-inicial img {
     content: url(../img/icons/menu-svgrepo-com.svg);
     filter: invert(1);
-    height: 3rem;
+    height: 2rem;
   }
   #menu-inicial div {
     flex-direction: column;
@@ -730,7 +810,9 @@ footer a:hover {
     position: absolute;
     flex-direction: column;
     padding: 20px;
-    right: 10px;
+    right: 0;
+    top: 80px;
+    width: 100%;
   }
   #menu-inicial li {
     margin: 10px;
@@ -740,7 +822,7 @@ footer a:hover {
   }
   #projects > div.flex-center {
     flex-direction: column;
-    padding: 0 50px;
+    padding: 0 20px;
   }
   #projects > div > div:last-child {
     flex-wrap: wrap;
@@ -762,9 +844,5 @@ footer a:hover {
   }
   .img-project-code > img {
     height: 250px;
-  }
-  footer > div {
-    flex-wrap: wrap;
-    margin: 2px;
   }
 }/*# sourceMappingURL=style.css.map */
